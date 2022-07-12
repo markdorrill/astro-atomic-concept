@@ -1,0 +1,21 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+  tailwind: string;
+	href: string;
+	size: number;
+	variant: number;
+}
+
+const structure = ["m-20", "pb-10"] //handle variants
+const surface = ["text-2xl"] //handle variants
+
+const { href, title, body, size, variant } = Astro.props;
+const cssClasses = [].concat(structure, surface).join(' ')
+---
+
+<!--
+	<a href="#" class="tailwind">Tailwind CSS a href Link</a>
+-->
+<a href={href} class={cssClasses}>{title}</a>

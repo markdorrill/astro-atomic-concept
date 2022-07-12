@@ -1,0 +1,26 @@
+---
+import LinkButton from "../../atoms/button/LinkButton.astro"
+export interface Props {
+	href: string;
+	title: string;
+	body: string;
+  tailwind: string;
+}
+const { href, title, body, tailwind } = Astro.props;
+---
+Hello
+
+<LinkButton
+  href={href}
+  title={title}
+  body={body}
+  variant=1
+/>
+
+<!--
+<Button
+  href={href}
+  title={title}
+  body={body}
+/>
+-->
